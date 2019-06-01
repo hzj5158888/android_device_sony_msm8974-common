@@ -46,13 +46,13 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.gnss</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
+        <transport arch="32">passthrough</transport>
+        <version>1.0</version>
         <interface>
             <name>IGnss</name>
             <instance>default</instance>
         </interface>
-    </hal>
+   </hal>
     <hal format="hidl">
         <name>android.hardware.drm</name>
         <transport>hwbinder</transport>
@@ -239,15 +239,6 @@
         <version>1.1</version>
         <interface>
             <name>ISupplicant</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.lineage.trust</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IUsbRestrict</name>
             <instance>default</instance>
         </interface>
     </hal>

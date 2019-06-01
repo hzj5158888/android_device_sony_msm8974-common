@@ -122,9 +122,9 @@ PRODUCT_PACKAGES += \
     libshim_camera \
     libshim_cald
 
-# Snap Camera
+# Camera2
 PRODUCT_PACKAGES += \
-    Snap
+    Camera2
 
 # Recovery
 PRODUCT_PACKAGES += \
