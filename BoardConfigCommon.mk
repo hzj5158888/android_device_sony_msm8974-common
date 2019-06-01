@@ -58,8 +58,10 @@ TARGET_PROVIDES_CAMERA_HAL := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 TARGET_USES_MEDIA_EXTENSIONS := true
+TARGET_NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
-  /system/vendor/lib/libmmcamera_faceproc.so=21
+    /system/bin/mediaserver=22 \
+    /system/vendor/bin/mm-qcamera-daemon=22
 
 # Charger
 HEALTHD_ENABLE_TRICOLOR_LED := true
