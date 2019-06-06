@@ -18,7 +18,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.mdpcomp.4k2kSplit=true \
     dev.pm.dyn_samplingrate=1 \
     debug.hwui.use_buffer_age=false \
-    debug.hwui.renderer=opengl
+    debug.cpurend.vsync=false \
+    debug.sf.recomputecrop=0 \
+    debug.sf.disable_backpressure=1 \
+    debug.sf.latch_unsignaled=1
+
+# UI
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.use_fifo_ui=1
+
+# Higher fling velocities to smooth scrolling
+# and provide better responsiveness
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.min.fling_velocity=160 \
+    ro.max.fling_velocity=20000
 
 # OpenGL ES 3.0
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -39,6 +52,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.speaker.prot.enable=false \
     audio.deep_buffer.media=true \
     af.fast_track_multiplier=1 \
+    ro.audio.flinger_standbytime_ms=300 \
     vendor.audio_hal.period_size=192 \
     audio.offload.pcm.16bit.enable=true \
     audio.offload.pcm.24bit.enable=true \
@@ -58,7 +72,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.boot-dex2oat-threads=4 \
     dalvik.vm.dex2oat-threads=2 \
-    dalvik.vm.image-dex2oat-threads=4
+    dalvik.vm.image-dex2oat-threads=4 \
+    dalvik.vm.checkjni=false \
+    dalvik.vm.verify-bytecode=false \
+    persist.sys.purgeable_assets=1
 
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
