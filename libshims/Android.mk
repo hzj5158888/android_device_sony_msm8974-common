@@ -81,6 +81,11 @@ LOCAL_SRC_FILES := \
     utils/Looper.cpp \
     utils/VectorImpl.cpp
 
+ifeq ($(BOARD_VENDOR_PLATFORM),rhine)
+LOCAL_SRC_FILES += \
+    ui/rhine-camera-hack.cpp
+endif
+
 LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/include \
     external/safe-iop/include \

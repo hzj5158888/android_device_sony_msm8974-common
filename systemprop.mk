@@ -18,10 +18,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.mdpcomp.4k2kSplit=true \
     dev.pm.dyn_samplingrate=1 \
     debug.hwui.use_buffer_age=false \
-    debug.cpurend.vsync=false \
-    debug.sf.recomputecrop=0 \
-    debug.sf.disable_backpressure=1 \
-    debug.sf.latch_unsignaled=1
+    debug.cpurend.vsync=false
 
 # UI
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -62,6 +59,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     av.streaming.offload.enable=enable \
     media.aac_51_output_enabled=true \
     qcom.hw.aac.encoder=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.media_vol_steps=25 \
+    ro.config.vc_call_vol_steps=7
 
 # Storage & USB OTG
 PRODUCT_PROPERTY_OVERRIDES += \
